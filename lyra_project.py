@@ -16,7 +16,7 @@ import io
 GEMINI_API_KEY = "hghfh"  #Generate your API Key
 # CORRECT API ENDPOINT
 GEMINI_MODEL = "gemini-2.5-flash"  # Updated to available model
-GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+GEMINI_API_URL = f"###gvh" #put yourself
 
 MEMORY_FILE = "lyra_memory.json"
 HISTORY_LIMIT = 8
@@ -540,3 +540,4 @@ if __name__ == "__main__":
     app = LyraApp(root)
 
     root.mainloop()
+
