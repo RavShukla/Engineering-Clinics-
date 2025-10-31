@@ -13,7 +13,7 @@ from PIL import Image, ImageTk
 import io
 
 # ========================= CONFIG =========================
-GEMINI_API_KEY = "AIzaSyCO-Ovhb9lNKaIZUtwkHPdUxNSRrvUVw8A"  # Your API Key
+GEMINI_API_KEY = "hghfh"  #Generate your API Key
 # CORRECT API ENDPOINT
 GEMINI_MODEL = "gemini-2.5-flash"  # Updated to available model
 GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
@@ -538,4 +538,5 @@ class LyraApp:
 if __name__ == "__main__":
     root = tk.Tk()
     app = LyraApp(root)
+
     root.mainloop()
