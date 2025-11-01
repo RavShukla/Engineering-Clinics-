@@ -21,7 +21,7 @@ GEMINI_API_URL = f"###gvh" #put yourself
 MEMORY_FILE = "lyra_memory.json"
 HISTORY_LIMIT = 8
 
-# ======================== MEMORY ==========================
+#  MEMORY 
 def load_memory():
     if os.path.exists(MEMORY_FILE):
         try:
@@ -37,7 +37,7 @@ def save_memory(mem):
 
 memory = load_memory()
 
-# ====================== TEXT TO SPEECH =====================
+# TEXT TO SPEECH 
 tts_engine = None
 
 def init_tts():
@@ -55,25 +55,25 @@ def init_tts():
     except Exception as e:
         print(f"TTS Error: {e}")
 
-# def speak(text: str):
-#     def _speak():
-#         try:
-#             # Reinitialize TTS engine for each speak to ensure it works
-#             engine = pyttsx3.init()
-#             engine.setProperty("rate", 160)
-#             engine.setProperty("volume", 0.9)
-#             voices = engine.getProperty("voices")
-#             # Try to find Hindi voice first, then English
-#             for v in voices:
-#                 if "hindi" in v.name.lower() or "india" in v.name.lower() or "english" in v.name.lower():
-#                     engine.setProperty("voice", v.id)
-#                     break
-#             engine.say(text)
-#             engine.runAndWait()
-#             engine.stop()
-#         except Exception as e:
-#             print(f"TTS Error: {e}")
-#     threading.Thread(target=_speak, daemon=True).start()
+ def speak(text: str):
+    def _speak():
+      try:
+            # Reinitialize TTS engine for each speak to ensure it works
+            engine = pyttsx3.init()
+            engine.setProperty("rate", 160)
+            engine.setProperty("volume", 0.9)
+            voices = engine.getProperty("voices")
+            # Try to find Hindi voice first, then English
+            for v in voices:
+                if "hindi" in v.name.lower() or "india" in v.name.lower() or "english" in v.name.lower():
+                    engine.setProperty("voice", v.id)
+                    break
+            engine.say(text)
+            engine.runAndWait()
+            engine.stop()
+        except Exception as e:
+            print(f"TTS Error: {e}")
+    threading.Thread(target=_speak, daemon=True).start()
 def speak(text: str):
     def _speak():
         try:
@@ -540,4 +540,5 @@ if __name__ == "__main__":
     app = LyraApp(root)
 
     root.mainloop()
+
 
