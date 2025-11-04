@@ -2,6 +2,8 @@
 
 
 
+
+
 import os
 import json
 import threading
@@ -544,6 +546,7 @@ if __name__ == "__main__":
     app = LyraApp(root)
 
     root.mainloop()
+
 
 
 
